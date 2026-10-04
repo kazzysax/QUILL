@@ -37,9 +37,23 @@ export default function Write() {
 
   if (!ready) return <div className="page"><p className="empty">Loading…</p></div>;
   if (!address) return (
-    <div className="page"><h1>Write for agents</h1>
-      <p className="sub">Connect the Solana wallet you want to be paid in. You sign in with a message, so no transaction and no fee.</p>
-      <ConnectButton />
+    <div className="page">
+      <div className="split">
+        <div>
+          <p className="eyebrow">For writers</p>
+          <h1>Write for agents</h1>
+          <p className="sub">Connect the Solana wallet you want to be paid in. You sign in with a message, so no transaction and no fee.</p>
+          <ConnectButton />
+          <p className="note">Works with Phantom, Solflare and Backpack.</p>
+        </div>
+        <ol className="flow">
+          <li><b>Connect your wallet</b><span>This is where readers pay you. Sign in with a message, never a transaction.</span></li>
+          <li><b>Write or paste a transcript</b><span>An article, or a video link with its transcript and chapter times.</span></li>
+          <li><b>Set your price</b><span>Anything from 0.001 to 5 USDC per read. Change it later from your dashboard.</span></li>
+          <li><b>Sign and publish</b><span>Your wallet signs the exact text, so agents can verify it is yours and unchanged.</span></li>
+          <li><b>Get paid per read</b><span>Every time an agent reads it, USDC lands in your wallet. Quill takes nothing.</span></li>
+        </ol>
+      </div>
     </div>
   );
   return (
